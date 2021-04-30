@@ -55,7 +55,7 @@ class _MainPageState extends State<MainPage> {
         child: Center(
           child: _idx < 0
               ? CircularProgressIndicator()
-              : Text(
+              : SelectableText(
                   joke(),
                   style: TextStyle(fontSize: 48.0, color: Colors.white),
                   textAlign: TextAlign.center,
