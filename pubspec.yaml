@@ -20,5 +20,10 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/witze.txt
+    - assets/anti.txt
+    - assets/chuck-norris.txt
     - assets/deine-mutter.txt
+    - assets/gespraeche.txt
+    - assets/namen.txt
+    - assets/scherzfragen.txt
+    - assets/sprueche.txt

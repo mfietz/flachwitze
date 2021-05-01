@@ -34,7 +34,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   List<String> _jokes;
   int _idx = -1;
-  String _title = 'Witze';
+  String _title = 'Scherzfragen';
+  String _joke;
 
   @override
   void initState() {
@@ -42,15 +43,15 @@ class _MainPageState extends State<MainPage> {
     loadJokes();
   }
 
-  void loadJokes({String name = "witze"}) async {
+  void loadJokes({String name = "scherzfragen"}) async {
     var filename = 'assets/$name.txt';
     String text = await rootBundle.loadString(filename);
     _jokes = text.split("\n");
-    _refresh();
     String title = name.replaceAll('-', ' ').toTitleCase();
     setState(() {
       _title = title;
     });
+    _randomJoke();
   }
 
   @override
@@ -65,7 +66,7 @@ class _MainPageState extends State<MainPage> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             ListTile(
-              title: Text('Flachwitze'),
+              title: Text('Scherzfragen'),
               onTap: () {
                 loadJokes();
                 Navigator.pop(context);
@@ -78,16 +79,51 @@ class _MainPageState extends State<MainPage> {
                 Navigator.pop(context);
               },
             ),
+            ListTile(
+              title: Text('Chuck Norris Witze'),
+              onTap: () {
+                loadJokes(name: "chuck-norris");
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Sprüche'),
+              onTap: () {
+                loadJokes(name: "sprueche");
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Gespräche'),
+              onTap: () {
+                loadJokes(name: "gespraeche");
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Namenswitze'),
+              onTap: () {
+                loadJokes(name: "namen");
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Anti-Witze'),
+              onTap: () {
+                loadJokes(name: "anti");
+                Navigator.pop(context);
+              },
+            ),
           ],
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Center(
-          child: _idx < 0
+          child: _joke == null
               ? CircularProgressIndicator()
               : SelectableText(
-                  joke(),
+                  _joke,
                   style: TextStyle(fontSize: 48.0, color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
@@ -97,8 +133,8 @@ class _MainPageState extends State<MainPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FloatingActionButton(
-            onPressed: _refresh,
-            tooltip: 'Refresh',
+            onPressed: _randomJoke,
+            tooltip: 'Random',
             child: Icon(Icons.refresh),
           ),
           SizedBox(width: 16),
@@ -112,28 +148,27 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  String joke() {
+  String nextJoke() {
+    if (_idx >= _jokes.length) {
+      return "[Wähle eine andere Kategorie].";
+    }
     var joke = _jokes[_idx];
-    return joke.replaceAll(" - ", "\n").replaceAll(". ", ".\n").replaceAll("? ", "?\n");
+    joke = joke.replaceAll(" - ", "{j\n").replaceAll(". ", ".\n").replaceAll("? ", "?\n");
+    _jokes.removeAt(_idx);
+    return joke;
   }
 
-  void _refresh() {
-    if (_jokes == null) {
-      return;
-    }
+  void _randomJoke() {
     int idx = widget.random.nextInt(_jokes.length);
     setState(() {
-      _idx = idx;
+      _idx = min(idx, _jokes.length - 1);
+      _joke = nextJoke();
     });
-    _jokes.removeAt(idx);
   }
 
   void _next() {
-    if (_jokes == null) {
-      return;
-    }
     setState(() {
-      _idx++;
+      _joke = nextJoke();
     });
   }
 }
