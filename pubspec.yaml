@@ -21,3 +21,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/witze.txt
+    - assets/deine-mutter.txt
