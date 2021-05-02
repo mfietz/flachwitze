@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -43,10 +45,10 @@ class _MainPageState extends State<MainPage> {
     loadJokes();
   }
 
-  void loadJokes({String name = "scherzfragen"}) async {
+  void loadJokes({String name = 'scherzfragen'}) async {
     var filename = 'assets/$name.txt';
     String text = await rootBundle.loadString(filename);
-    _jokes = text.split("\n");
+    _jokes = text.split('\n');
     String title = name.replaceAll('-', ' ').toTitleCase();
     setState(() {
       _title = title;
@@ -62,58 +64,66 @@ class _MainPageState extends State<MainPage> {
       ),
       backgroundColor: Colors.orange,
       drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            ListTile(
-              title: Text('Scherzfragen'),
-              onTap: () {
-                loadJokes();
-                Navigator.pop(context);
-              },
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: <Widget>[
+                  ListTile(
+                    title: Text('Scherzfragen'),
+                    onTap: () {
+                      loadJokes();
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Mutterwitze'),
+                    onTap: () {
+                      loadJokes(name: 'deine-mutter');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Chuck Norris Witze'),
+                    onTap: () {
+                      loadJokes(name: 'chuck-norris');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Sprüche'),
+                    onTap: () {
+                      loadJokes(name: 'sprueche');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Gespräche'),
+                    onTap: () {
+                      loadJokes(name: 'gespraeche');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Namenswitze'),
+                    onTap: () {
+                      loadJokes(name: 'namen');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: Text('Anti-Witze'),
+                    onTap: () {
+                      loadJokes(name: 'anti');
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ),
             ),
-            ListTile(
-              title: Text('Mutterwitze'),
-              onTap: () {
-                loadJokes(name: "deine-mutter");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Chuck Norris Witze'),
-              onTap: () {
-                loadJokes(name: "chuck-norris");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Sprüche'),
-              onTap: () {
-                loadJokes(name: "sprueche");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Gespräche'),
-              onTap: () {
-                loadJokes(name: "gespraeche");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Namenswitze'),
-              onTap: () {
-                loadJokes(name: "namen");
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: Text('Anti-Witze'),
-              onTap: () {
-                loadJokes(name: "anti");
-                Navigator.pop(context);
-              },
-            ),
+            _madeWithFlutter(),
+            _hostedOnGithub(),
           ],
         ),
       ),
@@ -148,12 +158,46 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
+  Widget _madeWithFlutter() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: RichText(
+        text: TextSpan(
+          children: [
+            TextSpan(text: 'Made with '),
+            TextSpan(
+              children: [
+                TextSpan(
+                    text: 'Flutter',
+                    style: new TextStyle(color: Colors.blue),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launch('https://flutter.dev');
+                      }),
+                WidgetSpan(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                    child: Icon(
+                      Icons.open_in_new,
+                      color: Colors.blue,
+                      size: 16.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   String nextJoke() {
     if (_idx >= _jokes.length) {
-      return "[Wähle eine andere Kategorie].";
+      return '[Wähle eine andere Kategorie].';
     }
     var joke = _jokes[_idx];
-    joke = joke.replaceAll(" - ", "{j\n").replaceAll(". ", ".\n").replaceAll("? ", "?\n");
+    joke = joke.replaceAll(' - ', '{j\n').replaceAll('. ', '.\n').replaceAll('? ', '?\n');
     _jokes.removeAt(_idx);
     return joke;
   }
@@ -170,6 +214,40 @@ class _MainPageState extends State<MainPage> {
     setState(() {
       _joke = nextJoke();
     });
+  }
+
+  Widget _hostedOnGithub() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: RichText(
+        text: TextSpan(
+          children: [
+            TextSpan(text: 'Hosted on '),
+            TextSpan(
+              children: [
+                TextSpan(
+                    text: 'Github',
+                    style: new TextStyle(color: Colors.blue),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launch('https://github.com/mfietz/flachwitze');
+                      }),
+                WidgetSpan(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                    child: Icon(
+                      Icons.open_in_new,
+                      color: Colors.blue,
+                      size: 16.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
