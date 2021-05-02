@@ -101,7 +101,7 @@ Was ist schwarz-weiß und sitzt auf der Schaukel? Ein Schwinguin.
 Was ist süß und schwingt sich von Torte zu Torte? Tarzipan.
 Was ist süß, klebrig und geht durch die Wüste? Ein Karamel.
 Was ist unter der Erde und stinkt? Eine Furzel.
-Was ist weiß und fliegt durch den Wald? Biene Mayo.
+Was ist weiß, ungesund und fliegt über die Wiese? Biene Mayo.
 Was ist weiß und guckt durchs Schlüsselloch? Ein Spannbettlaken.
 Was ist weiß und rennt den Berg wieder hoch? Eine Lawine mit Heimweh.
 Was ist weiß und schnarcht auf der Wiese? Ein Schlaf.
@@ -137,7 +137,7 @@ Was sagt ein Ackerbesteller bei gutem Wetter? Das Land-wird.
 Was sagt ein Gen, wenn es ein anderes trifft? Halogen.
 Was sagt ein Pirat im Pferdestall? A, Heu.
 Was schwimmt auf dem Teich und fängt mit Z an? Zwei Enten.
-Was schwimmt im Meer und addiert? Ein Oktoplus.
+Was schwimmt im Meer und kann addieren? Ein Oktoplus.
 Was sind die teuersten Tomaten? Die Geldautomaten.
 Was sitzt am Frühstückstisch und winkt? Ein Grüsli.
 Was sitzt auf dem Baum und schreit "Aha!"? Ein Uhu mit Sprachfehler.
@@ -273,4 +273,74 @@ Wie bestellt ein Ossi einen Weihnachtsbaum auf Englisch? A tännschen please!
 Warum han die Araber ka Brot? Weils ka-Mehl ham!
 Welche Vögel können nicht hören? Die Tauben!
 Was ist ein Lüneburger, der aus der Kirche ausgetreten ist? Ein Lüneburger Heide!
-Warum fliegen Storche im Winter in den Süden? — Weil Laufen zu lange dauern würde.
+Warum fliegen Storche im Winter in den Süden? Weil Laufen zu lange dauern würde.
+Was ist braun, piept und fliegt durch die Luft? Ein Kotkelchen.
+Was passiert, wenn man bei Ikea klaut? Man wird vermöbelt.
+Was ist das Gegenteil von Reformhaus? Reh hinterm Haus.
+Wie nennt man eine iPhone-Hülle noch? Apfeltasche.
+Was hat ein Mann ohne Beine? Erdnüsse.
+Welche Sprache wird in der Sauna gesprochen? Schwitzerdeutsch.
+Was ist paniert und raubt Leute aus? Ein Zigauner-Schnitzel.
+Was entsteht, wenn sich ein Igel und ein Regenwurm paaren? Eine Rolle Stacheldraht.
+Warum trinken Mäuse keinen Alkohol? Weil sie Angst vorm Kater haben.
+Woraus wurde das Haus von Jesus gebaut? Aus Jerusa-Lehm.
+Was kriegt ein Kannibale der zu spät zum Essen kommt? Die kalte Schulter.
+Wie verbrennt man ganz schnell 900 Kalorien? Indem man die Pizza im Ofen vergisst.
+Wie nennt man springende Pilze? Jumpingnons.
+Was ist kalt, blau und steht am Straßenrand? Eine Frostituierte.
+Was hängt im Urwald an den Bäumen? Urlaub.
+Was war Hitlers Lieblings-Süssigkeit? Nazipan.
+Wieviel wiegen ein Pferd und ein Hund zusammen? Ein Pfund.
+Welchen Preis gewinnen besonders ruhige und brave Hunde? Den No-Bell-Preis.
+Was sagt man zu einem Inder, der stolpert? Fall nicht Hindu.
+Was steht auf dem Grabstein eines Mathematikers? "Damit hat er nicht gerechnet."
+Was heisst Wasser auf Russisch? Wodka Zero.
+Warum stehen Frauen immer in der Küche? Wegen der Herdanziehungskraft.
+Wie nennt man einen Ritter ohne Helm? Willhelm.
+Was ist gesund und schwimmt auf dem Wasser? Ein Vollkornboot.
+Was ist weiss und fliegt nach oben? Eine behinderte Schneeflocke.
+Was ist ein Einarmiger mit einem Kartenspiel? Mischen Impossible.
+Wie nennt man einen Liliputaner, der 20 Kinder hat? Fruchtzwerg.
+Was sitzt im Baum und trägt einen Turban? Ein Scheichhörnchen.
+Wie heißt die Frau von Herkules? Fraukules.
+Was ist braun, süß und rennt durch den Wald? Eine Joggolade.
+Was war der Name des ersten Taxifahrers? Schlimmes. Denn schon in der Bibel stand: "Schlimmes wird euch wieder fahren."
+Womit kann man Berge glätten? Mit dem Hügeleisen.
+Wie nennt man eine weibliche Pute? Putin.
+Was macht eine Eskimofrau auf der Eisscholle? Abtreiben.
+Was sind vier Nazis in der Ecke? Ein rechter Winkel.
+Was läuft durch den Wald und schiesst mit dem Gewehr? Schrotkäppchen.
+Was ist eine Glühbirne, wenn sie zu Boden fällt? Fassungslos.
+Was macht ein Mathematiker in seinem Garten? Wurzeln ziehen.
+Wie nennt man ein hartgefrorenes Mammut? Hartmut.
+Was macht man, wenn man eine Schlange in der Wüste sieht? Sich hinten anstellen.
+Was heisst Sonnenuntergang auf finnisch? Helsinki.
+Was sitzt im Baum, hat Kopfschmerzen und kann nachts gut sehen? Eine Beule.
+Was sagt ein irakischer Bäcker zu seinem Lehrling? Bagdad.
+Was passiert, wenn man sich an Pfannkuchen überfrisst? Man crêpiert.
+Was lebt in der Savanne und ist immer sauber? Eine Hygiäne.
+Was gräbt und ist aus der Puste? Eine Schnaufel.
+Welches Gemüse essen Sanitäter am liebsten? Rettich.
+In welcher Maßeinheit messen Hunde ihre Temperatur? In Belgrad.
+Was macht ein Reh bei Haarausfall? Es geht in die Rehhaarklinik.
+Was benutzt ein Geizhals zum frisieren? Spar-gel.
+Was ist schwarz-weiss gestreift und berührt nicht den Boden? Ein Schwebra.
+Was haben Jesus und ein VW-Bus gemeinsam? Beide sind Mehrtürer.
+Was unterscheidet Bill Gates von Batman? Batman hat den Kampf gegen den Pinguin gewonnen.
+Wie viele Leute braucht man, um einen Hubschrauber zu fliegen? Zwei - Einer hupt, der andere schraubt.
+Kann man mit einem Tampon schreiben? In der Regel schon.
+Wie klingelt ein Gorilla an der Tür? King-Kong, King-Kong!
+Was macht ein Junkie unter der Dusche? Clean werden.
+Was hat ein Engel, wenn er in einen Misthaufen fällt? Kotflügel.
+Warum müssen Briefträger so oft zum Drogentest? Weil sie ständig was einwerfen.
+Was steht beim Fleischer neben dem Bett? Eine Schlachttischlampe.
+Was ist knusprig, braun und läuft mit einem Korb durch den Wald? Brotkäppchen.
+Was gibt es beim Imker zum Dessert? Bienenstich.
+Was macht ein Steak hinter dem Sofa? Es versteakt sich.
+Was macht ein Pirat am Computer? Er drückt die Enter-Taste.
+Welches Nagetier hat einen Sprachfehler? Der St-otter.
+Was hört man, wenn man sich einen Döner ans Ohr hält? Das Schweigen der Lämmer.
+Was ist rot, fruchtig und sehr kostbar? Eine Wertbeere.
+Was ist rund, braun und riecht unangenehm? Ein Stuhlkreis.
+Wo haben Jungs und Mädels heutzutage ihr erstes Date? Im Tindergarten.
+Was ist rot, gesund und gut gegen Eisenmangel? Schraubensaft.
