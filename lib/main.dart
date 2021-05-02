@@ -168,18 +168,19 @@ class _MainPageState extends State<MainPage> {
             TextSpan(
               children: [
                 TextSpan(
-                    text: 'Flutter',
-                    style: new TextStyle(color: Colors.blue),
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        launch('https://flutter.dev');
-                      }),
+                  text: 'Flutter',
+                  style: new TextStyle(color: Colors.blue),
+                  mouseCursor: SystemMouseCursors.click,
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      launch('https://flutter.dev');
+                    },
+                ),
                 WidgetSpan(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: Icon(
                       Icons.open_in_new,
-                      color: Colors.blue,
                       size: 16.0,
                     ),
                   ),
@@ -226,18 +227,19 @@ class _MainPageState extends State<MainPage> {
             TextSpan(
               children: [
                 TextSpan(
-                    text: 'Github',
-                    style: new TextStyle(color: Colors.blue),
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        launch('https://github.com/mfietz/flachwitze');
-                      }),
+                  text: 'Github',
+                  style: new TextStyle(color: Colors.blue),
+                  mouseCursor: SystemMouseCursors.click,
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      launch('https://github.com/mfietz/flachwitze');
+                    },
+                ),
                 WidgetSpan(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: Icon(
                       Icons.open_in_new,
-                      color: Colors.blue,
                       size: 16.0,
                     ),
                   ),
