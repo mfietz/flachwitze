@@ -48,7 +48,7 @@ class _MainPageState extends State<MainPage> {
   void loadJokes({String name = 'scherzfragen'}) async {
     var filename = 'assets/$name.txt';
     String contents = await rootBundle.loadString(filename);
-    _jokes = contents.split('\n').where((text) => text.isNotEmpty);
+    _jokes = contents.split('\n').where((text) => text.isNotEmpty).toList(growable: false);
     String title = name.replaceAll('-', ' ').toTitleCase();
     setState(() {
       _title = title;
