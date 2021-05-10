@@ -103,10 +103,8 @@ Was ist süß, klebrig und geht durch die Wüste? Ein Karamel.
 Was ist unter der Erde und stinkt? Eine Furzel.
 Was ist weiß, ungesund und fliegt über die Wiese? Biene Mayo.
 Was ist weiß und guckt durchs Schlüsselloch? Ein Spannbettlaken.
-Was ist weiß und rennt den Berg wieder hoch? Eine Lawine mit Heimweh.
 Was ist weiß und schnarcht auf der Wiese? Ein Schlaf.
 Was ist weiß und springt von Baum zu Baum? Ein Tierarzt bei der Zeckenimpfung.
-Was ist weiß und stört beim Essen? Eine Lawine.
 Was ist weiß und tanz im Wald ums Feuer? Rumpelpilzchen.
 Was ist wohlhabend und springt von Ast zu Ast? Ein Scheichhörnchen.
 Was kauft ein Mann mit zwei linken Füßen im Schuhgeschäft? Flip Flips.
@@ -298,7 +296,6 @@ Was heisst Wasser auf Russisch? Wodka Zero.
 Warum stehen Frauen immer in der Küche? Wegen der Herdanziehungskraft.
 Wie nennt man einen Ritter ohne Helm? Willhelm.
 Was ist gesund und schwimmt auf dem Wasser? Ein Vollkornboot.
-Was ist weiss und fliegt nach oben? Eine kaputte Schneeflocke.
 Was ist ein Einarmiger mit einem Kartenspiel? Mischen Impossible.
 Wie nennt man einen Liliputaner, der 20 Kinder hat? Fruchtzwerg.
 Was sitzt im Baum und trägt einen Turban? Ein Scheichhörnchen.
@@ -346,3 +343,5 @@ Wo haben Jungs und Mädels heutzutage ihr erstes Date? Im Tindergarten.
 Was ist rot, gesund und gut gegen Eisenmangel? Schraubensaft.
 Wie nennt man behaarte Jugendliche? Fellteens.
 Was ist ein nackter Ritter? Margarita.
+Was macht ein Bäcker ohne Arme und Beine? Rumkugeln.
+Was ist ein Cowboy ohne Pferd? Ein Sattelschlepper.
