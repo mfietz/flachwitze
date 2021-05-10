@@ -198,7 +198,7 @@ class _MainPageState extends State<MainPage> {
       return '[Wähle eine andere Kategorie].';
     }
     var joke = _jokes[_idx];
-    joke = joke.replaceAll(' - ', '{j\n').replaceAll('. ', '.\n').replaceAll('? ', '?\n');
+    joke = joke.replaceAll(' - ', '\n').replaceAll('. ', '.\n').replaceAll('? ', '?\n');
     _jokes.removeAt(_idx);
     return joke;
   }
