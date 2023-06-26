@@ -121,6 +121,13 @@ class _MainPageState extends State<MainPage> {
                         Navigator.pop(context);
                       },
                     ),
+                    ListTile(
+                      title: const Text('Verabschiedungen'),
+                      onTap: () {
+                        loadJokes(name: 'verabschiedungen');
+                        Navigator.pop(context);
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -201,7 +208,10 @@ class _MainPageState extends State<MainPage> {
       return '[Wähle eine andere Kategorie].';
     }
     var joke = _jokes[_idx];
-    joke = joke.replaceAll(' - ', '\n').replaceAll('. ', '.\n').replaceAll('? ', '?\n');
+    joke = joke
+        .replaceAll(' - ', '\n')
+        .replaceAll('. ', '.\n')
+        .replaceAll('? ', '?\n');
     _jokes.removeAt(_idx);
     return joke;
   }
