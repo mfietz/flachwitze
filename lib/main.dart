@@ -128,6 +128,13 @@ class _MainPageState extends State<MainPage> {
                         Navigator.pop(context);
                       },
                     ),
+                    ListTile(
+                      title: const Text('NSFW'),
+                      onTap: () {
+                        loadJokes(name: 'scherzfragen-nsfw');
+                        Navigator.pop(context);
+                      },
+                    ),
                   ],
                 ),
               ),
