@@ -132,8 +132,16 @@ class _MainPageState extends State<MainPage> {
                       Navigator.pop(context);
                     },
                   ),
+                  ListTile(
+                    title: const Text('Sich betrinken'),
+                    onTap: () {
+                      loadJokes(name: 'betrinken');
+                      Navigator.pop(context);
+                    },
+                  ),
                 ],
               ),
+
             ),
           ],
         ),
