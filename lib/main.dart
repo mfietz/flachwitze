@@ -1,23 +1,22 @@
 import 'dart:math';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flachwitze',
-      theme: ThemeData.from(
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepOrange),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.orange,
       ),
       home: MainPage(),
     );
@@ -61,87 +60,82 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_title),
+        elevation: 8.0,
       ),
-      backgroundColor: Colors.orange,
       drawer: Drawer(
-        child: Container(
-          color: Colors.white,
-          child: Column(
-            children: [
-              Expanded(
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  children: <Widget>[
-                    ListTile(
-                      title: const Text('Scherzfragen'),
-                      onTap: () {
-                        loadJokes();
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('Mutterwitze'),
-                      onTap: () {
-                        loadJokes(name: 'deine-mutter');
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('Chuck Norris Witze'),
-                      onTap: () {
-                        loadJokes(name: 'chuck-norris');
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('Sprüche'),
-                      onTap: () {
-                        loadJokes(name: 'sprueche');
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('Gespräche'),
-                      onTap: () {
-                        loadJokes(name: 'gespraeche');
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('Namenswitze'),
-                      onTap: () {
-                        loadJokes(name: 'namen');
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('Anti-Witze'),
-                      onTap: () {
-                        loadJokes(name: 'anti');
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('Verabschiedungen'),
-                      onTap: () {
-                        loadJokes(name: 'verabschiedungen');
-                        Navigator.pop(context);
-                      },
-                    ),
-                    ListTile(
-                      title: const Text('NSFW'),
-                      onTap: () {
-                        loadJokes(name: 'scherzfragen-nsfw');
-                        Navigator.pop(context);
-                      },
-                    ),
-                  ],
-                ),
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: <Widget>[
+                  ListTile(
+                    title: const Text('Scherzfragen'),
+                    onTap: () {
+                      loadJokes();
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Mutterwitze'),
+                    onTap: () {
+                      loadJokes(name: 'deine-mutter');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Chuck Norris Witze'),
+                    onTap: () {
+                      loadJokes(name: 'chuck-norris');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Sprüche'),
+                    onTap: () {
+                      loadJokes(name: 'sprueche');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Gespräche'),
+                    onTap: () {
+                      loadJokes(name: 'gespraeche');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Namenswitze'),
+                    onTap: () {
+                      loadJokes(name: 'namen');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Anti-Witze'),
+                    onTap: () {
+                      loadJokes(name: 'anti');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Verabschiedungen'),
+                    onTap: () {
+                      loadJokes(name: 'verabschiedungen');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('NSFW'),
+                    onTap: () {
+                      loadJokes(name: 'scherzfragen-nsfw');
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
               ),
-              _madeWithFlutter(),
-              _hostedOnGithub(),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       body: Padding(
@@ -151,7 +145,7 @@ class _MainPageState extends State<MainPage> {
               ? const CircularProgressIndicator()
               : SelectableText(
                   _joke!,
-                  style: const TextStyle(fontSize: 48.0, color: Colors.white),
+                  style: const TextStyle(fontSize: 48.0),
                   textAlign: TextAlign.center,
                 ),
         ),
@@ -171,41 +165,6 @@ class _MainPageState extends State<MainPage> {
             child: const Icon(Icons.arrow_forward),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _madeWithFlutter() {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: RichText(
-        text: TextSpan(
-          children: [
-            const TextSpan(text: 'Made with '),
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: 'Flutter',
-                  style: const TextStyle(color: Colors.blue),
-                  mouseCursor: SystemMouseCursors.click,
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      launch('https://flutter.dev');
-                    },
-                ),
-                const WidgetSpan(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 2.0),
-                    child: Icon(
-                      Icons.open_in_new,
-                      size: 16.0,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
       ),
     );
   }
@@ -235,41 +194,6 @@ class _MainPageState extends State<MainPage> {
     setState(() {
       _joke = nextJoke();
     });
-  }
-
-  Widget _hostedOnGithub() {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: RichText(
-        text: TextSpan(
-          children: [
-            const TextSpan(text: 'Hosted on '),
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: 'Github',
-                  style: const TextStyle(color: Colors.blue),
-                  mouseCursor: SystemMouseCursors.click,
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      launch('https://github.com/mfietz/flachwitze');
-                    },
-                ),
-                const WidgetSpan(
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 2.0),
-                    child: Icon(
-                      Icons.open_in_new,
-                      size: 16.0,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
 

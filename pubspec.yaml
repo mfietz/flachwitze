@@ -12,7 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.4
-  url_launcher: ^6.0.17
 
 dev_dependencies:
   flutter_lints: ^3.0.1
