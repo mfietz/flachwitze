@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MainPage extends StatefulWidget {
-  MainPage({Key? key}) : super(key: key);
+  MainPage({super.key});
 
   final Random random = Random();
 
