@@ -29,10 +29,10 @@ class MainPage extends StatefulWidget {
   final Random random = Random();
 
   @override
-  _MainPageState createState() => _MainPageState();
+  MainPageState createState() => MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class MainPageState extends State<MainPage> {
   late List<String> _jokes;
   int _idx = -1;
   String _title = 'Scherzfragen';
