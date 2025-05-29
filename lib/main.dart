@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flachwitze',
       theme: ThemeData(
         useMaterial3: true,
-        colorSchemeSeed: Colors.orange,
+        colorSchemeSeed: Colors.lightGreen,
       ),
       home: MainPage(),
     );
